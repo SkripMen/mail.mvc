@@ -14,7 +14,7 @@ class Controller_mail extends Controller
 
     function action_result()
     {
-        $data = $this->model->get_data();
+        $data = $this->model->get_result($_POST);
         $this->view->generate('result_view.php', 'template_view.php',$data);
     }
 

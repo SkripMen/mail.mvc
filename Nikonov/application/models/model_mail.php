@@ -1,14 +1,13 @@
 <?php
 class Model_Mail extends Model
 {
-    public function get_data()
+    public function get_result($array)
     {
         $data = 'Всё не норм';
-        if(mail ( $_POST['mail'] , trim($_POST['title']) , trim($_POST['text'])))
+        if(mail ( $array['mail'] , trim($array['title']) , trim($array['text'])))
         {
-            $data = 'Вам было отправлено сообщение от пользователя '.$_POST['name'].' ('.$_POST['mail'].'). <fieldset>
-<legend>Тема сообщения: '.$_POST['title'].'</legend>
-'.$_POST['text']. ' </fieldset>';
+            $data = 'Вам было отправлено сообщение от пользователя: '.$array['name'].'. На почту: ('.$array['mail'].') Тема сообщения: '.$array['title'].
+                '. Текст сообщения: '.$array['text'];
         }
         return $data;
     }
