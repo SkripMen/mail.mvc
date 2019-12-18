@@ -6,4 +6,4 @@
         <textarea name="text" rows="5" cols="50">
 </textarea></p>
     <p><input type="submit" value="Сохранить"></p>
-</form>'
+</form>
