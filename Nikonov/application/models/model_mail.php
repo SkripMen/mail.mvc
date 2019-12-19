@@ -10,7 +10,7 @@ class Model_Mail extends Model
             return $data;
         }
 
-        if (empty($name)){
+        if (empty($name)) {
             $data = 'Вы не ввели имя';
             return $data;
         }
@@ -26,7 +26,7 @@ class Model_Mail extends Model
         }
 
         if (mail($mail, trim($title), trim($text))) {
-            $data = 'Вам было отправлено сообщение от пользователя: ' . $name . '. На почту: (' . $mail . ') Тема сообщения: ' . $array['title'] .
+            $data = 'Вам было отправлено сообщение от пользователя: ' . $name . '. На почту: (' . $mail . ') Тема сообщения: ' . $title .
                 '. Текст сообщения: ' . $text;
         }
         return $data;
