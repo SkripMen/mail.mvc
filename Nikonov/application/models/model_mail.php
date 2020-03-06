@@ -6,7 +6,7 @@ class Model_Mail extends Model
     {
         $result = "";
         if (empty(trim($text) && empty(trim($title))) && empty(trim($name)) && !filter_var($mail, FILTER_VALIDATE_EMAIL)){
-            $result .= 'Вы неправильно забыли заполнить форму!</br>Ошибка введения почты!</br>Вы не ввели имя!</br>Вы не задали тему!</br>Вы не написали сообщение!</br>' . PHP_EOL;
+            $result .= 'Вы неправильно заполнили форму!</br>-Ошибка введения почты!</br>-Вы не ввели имя!</br>-Вы не задали тему!</br>-Вы не написали сообщение!</br>' . PHP_EOL;
         }
         else{
             if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
