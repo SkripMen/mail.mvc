@@ -1,5 +1,4 @@
 <?php
-
 class Controller_mail extends Controller
 {
     function __construct()
@@ -15,8 +14,8 @@ class Controller_mail extends Controller
 
     function action_result()
     {
-        $data = $this->model->get_result($_POST['mail'], $_POST['name'], $_POST['title'], $_POST['text']);
-        $this->view->generate('result_view.php', 'template_view.php', $data);
+        $data = $this->model->get_result($_POST['mail'],$_POST['name'],$_POST['title'],$_POST['text']);
+        $this->view->generate('result_view.php', 'template_view.php',$data);
     }
 
 }
